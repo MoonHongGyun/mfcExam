@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GLIMIMAGE",
+    "\\gSolution",
+    "\\MFCGLIMTEST",
+    "\\MFCGLIMTEST\\MFCGLIMTEST"
   ],
-  "SelectedNode": "\\MFCGLIMTEST.sln",
+  "SelectedNode": "\\MFCGLIMTEST\\MFCGLIMTEST\\MFCGLIMTESTDlg.cpp",
   "PreviewInSolutionExplorer": false
 }

@@ -263,7 +263,8 @@ void CMFCGLIMTESTDlg::drawCircle(int nSttX, int nSttY)
 		for (int i = nSttY - m_nHR; i < nSttX + m_nHR * 2; i++)
 		{
 			if (isInCircle(i, j))
-				fm[j * nPitch + i] = 0;
+				if(validImagePosition(i,j))
+					fm[j * nPitch + i] = 0;
 		}
 	}
 	updateDisplay();
@@ -322,4 +323,13 @@ void CMFCGLIMTESTDlg::OnBnClickedBtnLoad()
 
 	std::cout << "중심값 (x,y) :" << dCenterX << "\t" << dCenterY << std::endl;
 	updateDisplay();
+}
+
+bool CMFCGLIMTESTDlg::validImagePosition(int i, int j)
+{
+	int nWidth = m_Image.GetWidth();
+	int nHeight = m_Image.GetHeight();
+	CRect rect(0, 0, nWidth, nHeight);
+
+	return rect.PtInRect(CPoint(i, j));
 }

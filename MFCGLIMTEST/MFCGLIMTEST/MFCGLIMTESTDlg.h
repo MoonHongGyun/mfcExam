@@ -26,6 +26,7 @@ private:
 	CImage m_Image;
 	void updateDisplay();
 	bool isInCircle(int i, int j);
+	bool validImagePosition(int i, int j);
 	int m_nWidth = 0;
 	int m_nHeight = 0;
 	int m_nHR = 0;
