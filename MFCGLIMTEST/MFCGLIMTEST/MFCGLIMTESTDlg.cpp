@@ -178,8 +178,8 @@ void CMFCGLIMTESTDlg::OnBnClickedBtnBoard()
 	int nWidth = 1200;
 	int nHeight = 800;
 	int nBpp = 8;
-
-	m_Image.Create(nWidth, -nHeight, nBpp);
+	if (m_Image == NULL)
+		m_Image.Create(nWidth, -nHeight, nBpp);
 	if (nBpp == 8)
 	{
 		static RGBQUAD rgb[256];
